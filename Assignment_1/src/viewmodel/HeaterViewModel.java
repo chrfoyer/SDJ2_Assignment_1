@@ -1,4 +1,13 @@
 package viewmodel;
 
-public class HeaterViewModel {
+import model.Model;
+
+public class HeaterViewModel
+{
+  private Model model;
+
+  public HeaterViewModel(Model model)
+  {
+    this.model = model;
+  }
 }
