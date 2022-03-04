@@ -1,4 +1,8 @@
 package model;
 
-public interface Model {
+import utility.observer.javaobserver.NamedPropertyChangeSubject;
+
+public interface Model extends NamedPropertyChangeSubject
+{
+
 }
