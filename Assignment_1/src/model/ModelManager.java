@@ -8,6 +8,8 @@ import java.beans.PropertyChangeSupport;
 public class ModelManager implements Model
 {
   private PropertyChangeSupport property;
+  private Heater heater;
+  // todo do we have the three thermometer objects here?
 
   public ModelManager()
   {
