@@ -61,8 +61,7 @@ public class ViewHandler
         loader.setLocation(getClass().getResource(fxmlFile));
         Region root = loader.load();
         temperatureViewController = loader.getController();
-        temperatureViewController.init(this,
-            viewModelFactory.getThermometerViewModel(), root);
+        temperatureViewController.init(this, viewModelFactory.getVM(), root);
       }
       catch (Exception e)
       {
@@ -86,8 +85,7 @@ public class ViewHandler
         loader.setLocation(getClass().getResource(fxmlFile));
         Region root = loader.load();
         heaterViewController = loader.getController();
-        heaterViewController.init(this, viewModelFactory.getHeaterViewModel(),
-            root);
+        heaterViewController.init(this, viewModelFactory.gethVM(), root);
       }
       catch (Exception e)
       {
