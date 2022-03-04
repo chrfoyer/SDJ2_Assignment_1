@@ -7,12 +7,10 @@ import java.beans.PropertyChangeSupport;
 
 public class ModelManager implements Model
 {
-  private Temperature temperature;
   private PropertyChangeSupport property;
 
   public ModelManager()
   {
-    this.temperature = new Temperature();
     property = new PropertyChangeSupport(this);
   }
 
