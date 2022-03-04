@@ -21,7 +21,7 @@ public class ThermometerViewModel implements PropertyChangeListener
     this.model = model;
     this.currentTemp = new SimpleStringProperty();
 
-    model.addListener("tempChanged", this);
+    model.addListener(this);
   }
 
   @Override public void propertyChange(PropertyChangeEvent evt)

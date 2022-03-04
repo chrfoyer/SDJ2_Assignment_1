@@ -13,12 +13,12 @@ public class ViewModelFactory
     tVM = new ThermometerViewModel(model);
   }
 
-  public HeaterViewModel getListExerciseViewModel()
+  public HeaterViewModel gethVM()
   {
     return hVM;
   }
 
-  public ThermometerViewModel getManageExerciseViewModel()
+  public ThermometerViewModel getVM()
   {
     return tVM;
   }
