@@ -5,18 +5,16 @@ public class Thermometer implements Runnable
   private String id;
   private double t;//last measured temperature
   private int d;
-  private Model model;
   private TemperatureList temperatureList;
 
-  public Thermometer(Model model, String id, double t, int d){
+  public Thermometer( String id, double t, int d){
     this.id = id;
     this.t = t;
     this.d = d;
     temperatureList = new TemperatureList();
-    this.model = model;
   }
 
-
+/*
   private double temperature(double t, int p, int d, double t0, int s)
   {
     double tMax = Math.min(11 * p + 10, 11 * p + 10 + t0);
@@ -32,13 +30,21 @@ public class Thermometer implements Runnable
     return t;
   }
 
+ */
+
+  public void setTemp(double t){
+    this.t = t;
+    temperatureList.addTemperature(t);
+  }
+
+  public double getTemp(){
+    return t;
+  }
+
+
   public void run(){
     while(true){
-      t = temperature(t,2,d,0,6);
-      System.out.println("ID: " + id + "\nT:" + t);
-      Temperature temp = new Temperature(id,t);
-      System.out.println("temp: " + temp);
-      temperatureList.addTemperature(temp);
+      System.out.println(getTemp());
       try{
         Thread.sleep(6000);
       } catch (InterruptedException e){
