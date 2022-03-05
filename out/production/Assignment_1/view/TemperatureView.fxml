@@ -27,7 +27,7 @@
                                 <Font size="18.0" />
                             </font>
                         </Label>
-                        <Label prefHeight="140.0" prefWidth="46.0" text="temp1" textFill="RED" fx:id="temp0Label">
+                        <Label prefHeight="140.0" prefWidth="46.0" text="temp1" textFill="RED" fx:id="temp1Label">
                             <font>
                                 <Font size="16.0" />
                             </font>
@@ -41,7 +41,7 @@
                                 <Font size="18.0" />
                             </font>
                         </Label>
-                        <Label prefHeight="140.0" prefWidth="46.0" text="temp2" textFill="RED" fx:id="temp1Label">
+                        <Label prefHeight="140.0" prefWidth="46.0" text="temp2" textFill="RED" fx:id="temp2Label">
                             <font>
                                 <Font size="16.0" />
                             </font>
@@ -55,7 +55,7 @@
                                 <Font size="18.0" />
                             </font>
                         </Label>
-                        <Label prefHeight="140.0" prefWidth="46.0" text="temp3" textFill="RED" fx:id="temp2Label">
+                        <Label prefHeight="140.0" prefWidth="46.0" text="temp3" textFill="RED" fx:id="temp0Label">
                             <font>
                                 <Font size="16.0" />
                             </font>
