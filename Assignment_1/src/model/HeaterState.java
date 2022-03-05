@@ -1,15 +1,32 @@
 package model;
 
-public abstract class HeaterState {
+public abstract class HeaterState
+{
 
-    public abstract void increase(Heater heater);
+  public abstract void increase(Heater heater);
 
-    public abstract void decrease(Heater heater);
+  public abstract void decrease(Heater heater);
 
-    public abstract void timeout(Heater heater); // todo add to diagram
+  public abstract void timeout(Heater heater);
 
-    public String status()
+  public int status()
+  {
+    // return getClass().getSimpleName();
+    if (getClass().getSimpleName().equals("HeaterOff"))
     {
-        return getClass().getSimpleName();
-    }// todo add to diagram
+      return 0;
+    }
+    else if (getClass().getSimpleName().equals("HeaterLow"))
+    {
+      return 1;
+    }
+    else if (getClass().getSimpleName().equals("HeaterMedium"))
+    {
+      return 2;
+    }
+    else
+    {
+      return 3;
+    }
+  }
 }
