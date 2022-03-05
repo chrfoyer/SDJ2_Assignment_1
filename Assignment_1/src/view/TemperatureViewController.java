@@ -6,9 +6,9 @@ import javafx.scene.layout.Region;
 import viewmodel.ThermometerViewModel;
 
 public class TemperatureViewController {
+  @FXML Label temp0Label;
   @FXML Label temp1Label;
   @FXML Label temp2Label;
-  @FXML Label outsideTempLabel;
   @FXML Label errorLabel;
 
   private  ViewHandler viewHandler;
@@ -21,9 +21,9 @@ public class TemperatureViewController {
     this.viewModel = viewModel;
     this.root = root;
 
+    this.temp0Label.setText("");
     this.temp1Label.setText("");
     this.temp2Label.setText("");
-    this.outsideTempLabel.setText("");
     this.errorLabel.setText("");
   }
 
