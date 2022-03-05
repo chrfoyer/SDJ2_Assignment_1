@@ -20,7 +20,6 @@ public class ThermometerViewModel implements PropertyChangeListener
 
   private Model model;
 
-  //ctor
   public ThermometerViewModel(Model model)
   {
     this.model = model;
@@ -50,24 +49,25 @@ public class ThermometerViewModel implements PropertyChangeListener
           break;
       }
     }
+    errorLabel.set("");
   }
 
-  public StringProperty getT0LabelProprety()
+  public StringProperty getT0LabelProperty()
   {
     return t0Label;
   }
 
-  public StringProperty getT1LabelProprety()
+  public StringProperty getT1LabelProperty()
   {
     return t1Label;
   }
 
-  public StringProperty getT2LabelProprety()
+  public StringProperty getT2LabelProperty()
   {
     return t2Label;
   }
 
-  public StringProperty getErrorLabel()
+  public StringProperty getErrorLabelProperty()
   {
     return errorLabel;
   }
@@ -96,7 +96,6 @@ public class ThermometerViewModel implements PropertyChangeListener
                 t2Label.set(thermometer.getId() + " " + thermometer.getTemp());
                 break;
             }
-
           }
         }
       });

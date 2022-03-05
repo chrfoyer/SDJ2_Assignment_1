@@ -37,13 +37,21 @@ public class HeaterViewModel implements PropertyChangeListener
 
   @Override public void propertyChange(PropertyChangeEvent evt)
   {
-    if (evt.getPropertyName().equals("heaterIncrease"))
+    try
     {
-      increaseHeaterState();
+      if (evt.getPropertyName().equals("heaterIncrease"))
+      {
+        increaseHeaterState();
+      }
+      else if (evt.getPropertyName().equals("heaterDecrease"))
+      {
+        decreaseHeaterState();
+      }
     }
-    else if (evt.getPropertyName().equals("heaterDecrease"))
+    catch (Exception e)
     {
-      decreaseHeaterState();
+      errrorProprety.set(e.getMessage());
     }
+
   }
 }
