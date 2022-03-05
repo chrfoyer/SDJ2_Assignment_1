@@ -16,8 +16,13 @@ public class ModelTest {
 
         public void decrease();
          */
+        System.out.println(model.getThermometer("t0").getTemperatureList());
+        System.out.println(model.getThermometerList().toString());
+        model.updateTemperature(46.0, "t0");
+        System.out.println(model.getThermometerList().toString());
+        System.out.println(model.getThermometer("t0").getTemperatureList());
 
-        model.updateTemperature(69.0, "t0");
+
 
 
     }
