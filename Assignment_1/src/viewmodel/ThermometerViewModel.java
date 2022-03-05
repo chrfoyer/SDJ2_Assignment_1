@@ -25,17 +25,22 @@ public class ThermometerViewModel implements PropertyChangeListener
   {
     this.model = model;
     //id is for debug
-    this.t0Label = new SimpleStringProperty(
-        model.getThermometer("t0").getId() + model.getThermometer("t0")
-            .getTemp());
-    this.t1Label = new SimpleStringProperty(
-        model.getThermometer("t1").getId() + model.getThermometer("t1")
-            .getTemp());
-    this.t2Label = new SimpleStringProperty(
-        model.getThermometer("t2").getId() + model.getThermometer("t2")
-            .getTemp());
+    this.t0Label = new SimpleStringProperty();
+    this.t1Label = new SimpleStringProperty();
+    this.t2Label = new SimpleStringProperty();
+
     this.errorLabel = new SimpleStringProperty();
     model.addListener(this);
+  }
+
+  public void reset()
+  {
+    //ThermometerList thermoMeters = model;
+    for (Thermometer thermometer : thermoMeters.getList())
+    {
+      t1Label.set(thermometer.getId() + " " + thermometer.getTemp());
+      //test
+    }
   }
 
   public StringProperty getT0LabelProprety()
@@ -65,10 +70,13 @@ public class ThermometerViewModel implements PropertyChangeListener
     try
     {
       Platform.runLater(() -> {
-        ThermometerList updatedThermometerList = (ThermometerList) evt.getNewValue();
-        for (Thermometer thermometer : updatedThermometerList.getList())
+        if (evt.getPropertyName().equals("setTemp"))
         {
-          t1Label.set(thermometer.getId() + " " + thermometer.getTemp());
+          ThermometerList updatedThermometerList = (ThermometerList) evt.getNewValue();
+          for (Thermometer thermometer : updatedThermometerList.getList())
+          {
+            t1Label.set(thermometer.getId() + " " + thermometer.getTemp());
+          }
         }
       });
     }
