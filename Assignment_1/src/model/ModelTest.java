@@ -17,8 +17,7 @@ public class ModelTest {
         public void decrease();
          */
 
-        model.updateTemperature(69.0); // Problem: which thermometer am I updating?
-        // Suggested solution: Include thermometer in parameter or string/int
+        model.updateTemperature(69.0, "t0");
 
 
     }

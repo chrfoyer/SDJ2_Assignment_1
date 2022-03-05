@@ -5,6 +5,8 @@ public class Thermometer implements Runnable
   private String id;
   private double t;//last measured temperature
   private int d;
+  public static final double MAX = 45;
+  public static final double MIN = -1;
   private TemperatureList temperatureList;
 
   public Thermometer( String id, double t, int d){
@@ -37,6 +39,11 @@ public class Thermometer implements Runnable
     temperatureList.addTemperature(t);
   }
 
+  public String getId()
+  {
+    return id;
+  }
+
   public double getTemp(){
     return t;
   }
@@ -45,6 +52,14 @@ public class Thermometer implements Runnable
   public void run(){
     while(true){
       System.out.println(getTemp());
+      if (t >= MAX)
+      {
+        System.out.println("It's hot!");
+      }
+      else if (t <= MIN)
+      {
+        System.out.println("It's cold!");
+      }
       try{
         Thread.sleep(6000);
       } catch (InterruptedException e){

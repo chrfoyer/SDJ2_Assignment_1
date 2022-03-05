@@ -2,16 +2,14 @@ package model;
 
 public abstract class HeaterState {
 
+    public abstract void increase(Heater heater);
 
-    public HeaterState(){
-        // todo change class to match door exercise
-    }
+    public abstract void decrease(Heater heater);
 
-    public abstract void increase();
+    public abstract void timeout(Heater heater); // todo add to diagram
 
-    public abstract void decrease();
-
-    public abstract void timeout(); // todo add to diagram
-
-    public abstract String status(); // todo add to diagram
+    public String status()
+    {
+        return getClass().getSimpleName();
+    }// todo add to diagram
 }
