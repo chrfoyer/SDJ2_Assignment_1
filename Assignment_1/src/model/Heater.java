@@ -1,6 +1,7 @@
 package model;
 
-public class Heater {
+public class Heater
+{
 
   private HeaterState state;
 
@@ -32,5 +33,10 @@ public class Heater {
   public int status()
   {
     return state.status();
+  }
+
+  public String statusString()
+  {
+    return state.statusString();
   }
 }

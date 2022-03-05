@@ -9,12 +9,14 @@ public class ThermometerList
   private Thermometer t0;
   private Thermometer t1;
   private Thermometer t2;
+  private Heater heater;
 
-  public ThermometerList()
+  public ThermometerList(Heater heater)
   {
-    t0 = new Thermometer("t0", 0, 100); // outside
-    t1 = new Thermometer("t1", 0, 1); // inside close
-    t2 = new Thermometer("t2", 0, 7); // inside far
+    this.heater = heater;
+    t0 = new Thermometer("t0", -5, 1, heater);
+    t1 = new Thermometer("t1", 29, 7, heater);
+    t2 = new Thermometer("t2", 21, 100, heater); // todo confirm distance values
     list = new ArrayList<>();
     list.add(t0);
     list.add(t1);

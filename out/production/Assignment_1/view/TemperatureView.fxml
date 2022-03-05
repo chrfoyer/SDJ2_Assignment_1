@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TemperatureViewController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TemperatureViewController">
     <children>
         <HBox alignment="CENTER" prefHeight="95.0" prefWidth="600.0">
             <children>
@@ -27,7 +26,7 @@
                                 <Font size="18.0" />
                             </font>
                         </Label>
-                        <Label prefHeight="140.0" prefWidth="46.0" text="temp1" textFill="RED" fx:id="temp1Label">
+                        <Label fx:id="temp1Label" alignment="CENTER" contentDisplay="TOP" prefHeight="140.0" prefWidth="101.0" text="temp1" textFill="RED">
                             <font>
                                 <Font size="16.0" />
                             </font>
@@ -41,7 +40,7 @@
                                 <Font size="18.0" />
                             </font>
                         </Label>
-                        <Label prefHeight="140.0" prefWidth="46.0" text="temp2" textFill="RED" fx:id="temp2Label">
+                        <Label fx:id="temp2Label" alignment="CENTER" prefHeight="140.0" prefWidth="98.0" text="temp2" textFill="RED">
                             <font>
                                 <Font size="16.0" />
                             </font>
@@ -55,7 +54,7 @@
                                 <Font size="18.0" />
                             </font>
                         </Label>
-                        <Label prefHeight="140.0" prefWidth="46.0" text="temp3" textFill="RED" fx:id="temp0Label">
+                        <Label fx:id="temp0Label" alignment="CENTER" prefHeight="140.0" prefWidth="85.0" text="temp3" textFill="RED">
                             <font>
                                 <Font size="16.0" />
                             </font>
@@ -66,7 +65,7 @@
         </HBox>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="158.0" text="Heater Settings" onAction="#heaterSettings">
+                <Button mnemonicParsing="false" onAction="#heaterSettings" prefHeight="66.0" prefWidth="158.0" text="Heater Settings">
                     <font>
                         <Font size="19.0" />
                     </font>
@@ -75,7 +74,7 @@
         </HBox>
         <HBox alignment="CENTER" prefHeight="65.0" prefWidth="600.0">
             <children>
-                <Label text="Error" textFill="RED" fx:id="errorLabel">
+                <Label fx:id="errorLabel" text="Error" textFill="RED">
                     <font>
                         <Font size="14.0" />
                     </font>

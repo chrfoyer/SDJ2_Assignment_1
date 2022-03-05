@@ -9,6 +9,7 @@ import model.ThermometerList;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.util.ArrayList;
 
 public class ThermometerViewModel implements PropertyChangeListener
 {
@@ -41,13 +42,13 @@ public class ThermometerViewModel implements PropertyChangeListener
       switch (thermometer.getId())
       {
         case "t0":
-          t0Label.set(thermometer.getId() + " " + thermometer.getTemp());
+          t0Label.set(thermometer.getTemp() + " C°");
           break;
         case "t1":
-          t1Label.set(thermometer.getId() + " " + thermometer.getTemp());
+          t1Label.set(thermometer.getTemp() + " C°");
           break;
         case "t2":
-          t2Label.set(thermometer.getId() + " " + thermometer.getTemp());
+          t2Label.set(thermometer.getTemp() + " C°");
           break;
       }
     }
@@ -76,29 +77,36 @@ public class ThermometerViewModel implements PropertyChangeListener
 
   @Override public void propertyChange(PropertyChangeEvent evt)
   {
-    //todo debugging values
-    System.out.println("Change detected");
     try
     {
       Platform.runLater(() -> {
         if (evt.getPropertyName().equals("setTemp"))
         {
-          ThermometerList updatedThermometerList = (ThermometerList) evt.getNewValue();
-          for (Thermometer thermometer : updatedThermometerList.getList())
+          ArrayList<Thermometer> updatedThermometerList = (ArrayList<Thermometer>) evt.getNewValue();
+          for (Thermometer thermometer : updatedThermometerList)
           {
             switch (thermometer.getId())
             {
               case "t0":
-                t0Label.set(thermometer.getId() + " " + thermometer.getTemp());
+                t0Label.set(thermometer.getTemp() + " C°");
                 break;
               case "t1":
-                t1Label.set(thermometer.getId() + " " + thermometer.getTemp());
+                t1Label.set(thermometer.getTemp() + " C°");
                 break;
               case "t2":
-                t2Label.set(thermometer.getId() + " " + thermometer.getTemp());
+                t2Label.set(thermometer.getTemp() + " C°");
                 break;
             }
+            if (thermometer.getTemp()<Thermometer.MIN)
+            {
+              errorLabel.set("WARNING TEMPERATURE IS TO COLD PREPARE FOR EVACUATION");
+            }
+            else if (thermometer.getTemp()<Thermometer.MAX)
+            {
+              errorLabel.set("WARNING TEMPERATURE IS TO HOT PREPARE FOR EVACUATION");
+            }
           }
+
         }
       });
     }

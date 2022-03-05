@@ -29,4 +29,9 @@ public abstract class HeaterState
       return 3;
     }
   }
+
+  public String statusString()
+  {
+    return getClass().getSimpleName();
+  }
 }

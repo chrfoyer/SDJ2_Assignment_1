@@ -18,4 +18,8 @@ public interface Model extends UnnamedPropertyChangeSubject
   public void increase();
 
   public void decrease();
+
+  public void temperature(String id);
+
+  public void externalTemperature();
 }
