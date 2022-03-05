@@ -5,17 +5,19 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Region;
 import viewmodel.ThermometerViewModel;
 
-public class TemperatureViewController {
+public class TemperatureViewController
+{
   @FXML Label temp0Label;
   @FXML Label temp1Label;
   @FXML Label temp2Label;
   @FXML Label errorLabel;
 
-  private  ViewHandler viewHandler;
+  private ViewHandler viewHandler;
   private Region root;
   private ThermometerViewModel viewModel;
 
-  public void init(ViewHandler viewHandler, ThermometerViewModel viewModel, Region root)
+  public void init(ViewHandler viewHandler, ThermometerViewModel viewModel,
+      Region root)
   {
     this.viewHandler = viewHandler;
     this.viewModel = viewModel;
@@ -33,7 +35,8 @@ public class TemperatureViewController {
   }
 
   public void reset()
-  {}
+  {
+  }
 
   @FXML private void heaterSettings()
   {

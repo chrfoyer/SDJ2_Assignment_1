@@ -20,7 +20,6 @@ public class ThermometerViewModel implements PropertyChangeListener
 
   private Model model;
 
-  //ctor
   public ThermometerViewModel(Model model)
   {
     this.model = model;
@@ -35,30 +34,40 @@ public class ThermometerViewModel implements PropertyChangeListener
 
   public void reset()
   {
-    //ThermometerList thermoMeters = model;
     for (Thermometer thermometer : model.getThermometerList().getList())
     {
-      t1Label.set(thermometer.getId() + " " + thermometer.getTemp());
-      //test
+      switch (thermometer.getId())
+      {
+        case "t0":
+          t0Label.set(thermometer.getId() + " " + thermometer.getTemp());
+          break;
+        case "t1":
+          t1Label.set(thermometer.getId() + " " + thermometer.getTemp());
+          break;
+        case "t2":
+          t2Label.set(thermometer.getId() + " " + thermometer.getTemp());
+          break;
+      }
     }
+    errorLabel.set("");
   }
 
-  public StringProperty getT0LabelProprety()
+  public StringProperty getT0LabelProperty()
   {
     return t0Label;
   }
 
-  public StringProperty getT1LabelProprety()
+  public StringProperty getT1LabelProperty()
   {
     return t1Label;
   }
 
-  public StringProperty getT2LabelProprety()
+  public StringProperty getT2LabelProperty()
   {
     return t2Label;
   }
 
-  public StringProperty getErrorLabel()
+  public StringProperty getErrorLabelProperty()
   {
     return errorLabel;
   }
@@ -75,7 +84,18 @@ public class ThermometerViewModel implements PropertyChangeListener
           ThermometerList updatedThermometerList = (ThermometerList) evt.getNewValue();
           for (Thermometer thermometer : updatedThermometerList.getList())
           {
-            t1Label.set(thermometer.getId() + " " + thermometer.getTemp());
+            switch (thermometer.getId())
+            {
+              case "t0":
+                t0Label.set(thermometer.getId() + " " + thermometer.getTemp());
+                break;
+              case "t1":
+                t1Label.set(thermometer.getId() + " " + thermometer.getTemp());
+                break;
+              case "t2":
+                t2Label.set(thermometer.getId() + " " + thermometer.getTemp());
+                break;
+            }
           }
         }
       });
