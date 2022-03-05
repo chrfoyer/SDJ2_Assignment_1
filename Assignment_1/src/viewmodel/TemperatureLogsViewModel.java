@@ -13,11 +13,13 @@ import java.util.ArrayList;
 public class TemperatureLogsViewModel implements PropertyChangeListener
 {
   private Model model;
+  private int counter;
   private ObservableList<String> logs;
 
   public TemperatureLogsViewModel(Model model)
   {
     this.model = model;
+    counter = 1;
     logs = FXCollections.observableArrayList();
     model.addListener(this);
   }
@@ -38,10 +40,18 @@ public class TemperatureLogsViewModel implements PropertyChangeListener
       if (evt.getPropertyName().equals("setTemp"))
       {
         ArrayList<Thermometer> updatedThermometerList = (ArrayList<Thermometer>) evt.getNewValue();
-        for (Thermometer thermometer : updatedThermometerList)
+        //totally legit fix because for some unknown reason it would put in every value twice
+        if (counter % 2 != 0)
         {
-          logs.add(thermometer.getId() + "-> " + thermometer.getTemp() + " C°");
+          for (Thermometer thermometer : updatedThermometerList)
+          {
+            logs.add(
+                thermometer.getId() + "-> " + thermometer.getTemp() + " C°");
+          }
+          logs.add(
+              "-------------------------------------------------------------------------------------");
         }
+        counter++;
       }
     });
   }
