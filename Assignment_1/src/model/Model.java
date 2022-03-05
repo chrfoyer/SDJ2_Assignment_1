@@ -2,6 +2,8 @@ package model;
 
 import utility.observer.javaobserver.UnnamedPropertyChangeSubject;
 
+import java.util.ArrayList;
+
 public interface Model extends UnnamedPropertyChangeSubject
 {
 
@@ -11,7 +13,7 @@ public interface Model extends UnnamedPropertyChangeSubject
 
   public Thermometer getThermometer(String id);
 
-  public ThermometerList getThermometerList();
+  public ArrayList<Thermometer> getThermometerList();
 
   public void increase();
 

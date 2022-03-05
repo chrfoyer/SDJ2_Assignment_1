@@ -34,7 +34,7 @@ public class ThermometerViewModel implements PropertyChangeListener
 
   public void reset()
   {
-    for (Thermometer thermometer : model.getThermometerList().getList())
+    for (Thermometer thermometer : model.getThermometerList())
     {
       switch (thermometer.getId())
       {

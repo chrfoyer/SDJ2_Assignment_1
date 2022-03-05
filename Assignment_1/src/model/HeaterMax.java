@@ -1,9 +1,9 @@
 package model;
 
 public class HeaterMax extends HeaterState{
-  private Thread timer;
+  private Thread timer; // todo add to diagram
 
-  public HeaterMax(Heater heater)
+  public HeaterMax(Heater heater) // todo add to diagram
   {
     timer = new Thread(() -> {
       try {

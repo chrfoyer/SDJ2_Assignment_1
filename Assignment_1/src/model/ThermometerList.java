@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class ThermometerList
 {
+  // todo add to diagram (whole class)
   private ArrayList<Thermometer> list;
   private Thermometer t0;
   private Thermometer t1;
@@ -13,7 +14,7 @@ public class ThermometerList
   {
     t0 = new Thermometer("t0", 0, 1);
     t1 = new Thermometer("t1", 0, 7);
-    t2 = new Thermometer("t2", 0, 100);
+    t2 = new Thermometer("t2", 0, 100); // todo confirm distance values
     list = new ArrayList<>();
     list.add(t0);
     list.add(t1);
@@ -36,11 +37,5 @@ public class ThermometerList
     }
     System.out.println("Thermometer not found");
     return null;
-  }
-
-  public String toString()
-  {
-    return "t0: " + t0.getTemp() + "\nt1: " + t1.getTemp() + "\nt2: "
-        + t2.getTemp();
   }
 }

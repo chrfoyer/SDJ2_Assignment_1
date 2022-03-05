@@ -1,6 +1,7 @@
 package model;
 
 public class Heater {
+  // todo add to diagram
   private HeaterState state;
 
   public Heater()

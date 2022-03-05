@@ -4,6 +4,7 @@ import javafx.beans.property.Property;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
+import java.util.ArrayList;
 
 public class ModelManager implements Model
 {
@@ -35,10 +36,10 @@ public class ModelManager implements Model
     return list.getThermometer(id);
   }
 
-  @Override public ThermometerList getThermometerList()
+  @Override public ArrayList<Thermometer> getThermometerList()
   {
 
-    return list;
+    return list.getList();
   }
 
   @Override public void increase()

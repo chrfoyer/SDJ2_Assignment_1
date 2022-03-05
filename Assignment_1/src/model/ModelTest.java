@@ -29,6 +29,7 @@ public class ModelTest {
         System.out.println(model.getHeater().status());
         model.increase();
         System.out.println(model.getHeater().status());
+        model.decrease();
         /* Test the timeout
         try
         {

@@ -53,6 +53,11 @@ public class Thermometer implements Runnable
     return t;
   }
 
+  // todo add to diagram
+  public int getDistance()
+  {
+    return d;
+  }
 
   public void run(){
     while(true){
@@ -71,5 +76,11 @@ public class Thermometer implements Runnable
         //do nothing
       }
     }
+  }
+
+  // todo add to diagram
+  public String toString()
+  {
+    return id + ": " + t;
   }
 }
