@@ -13,9 +13,9 @@ import java.beans.PropertyChangeListener;
 public class ThermometerViewModel implements PropertyChangeListener
 {
   //todo fxml fields
-  private StringProperty t0Label;
-  private StringProperty t1Label;
-  private StringProperty t2Label;
+  private StringProperty t0Label; //OUTSIDE
+  private StringProperty t1Label; //INSIDE
+  private StringProperty t2Label; //INSIDE
   private StringProperty errorLabel;
 
   private Model model;
