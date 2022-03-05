@@ -22,8 +22,24 @@ public class ModelTest {
         System.out.println(model.getThermometerList().toString());
         System.out.println(model.getThermometer("t0").getTemperatureList());
 
+        System.out.println(model.getHeater().status());
+        model.increase();
+        System.out.println(model.getHeater().status());
+        model.increase();
+        System.out.println(model.getHeater().status());
+        model.increase();
+        System.out.println(model.getHeater().status());
+        /* Test the timeout
+        try
+        {
+            Thread.sleep(50000);
+        }
+        catch (InterruptedException e)
+        {
+            e.printStackTrace();
+        }
 
-
+         */
 
     }
 }

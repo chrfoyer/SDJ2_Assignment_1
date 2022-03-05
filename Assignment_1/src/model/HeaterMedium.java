@@ -4,7 +4,7 @@ public class HeaterMedium extends HeaterState
 {
   @Override public void increase(Heater heater)
   {
-    heater.setState(new HeaterMax());
+    heater.setState(new HeaterMax(heater));
   }
 
   @Override public void decrease(Heater heater)
