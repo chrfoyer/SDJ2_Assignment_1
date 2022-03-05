@@ -12,9 +12,9 @@ public class ThermometerList
 
   public ThermometerList()
   {
-    t0 = new Thermometer("t0", 0, 1);
-    t1 = new Thermometer("t1", 0, 7);
-    t2 = new Thermometer("t2", 0, 100); // todo confirm distance values
+    t0 = new Thermometer("t0", 0, 100); // outside
+    t1 = new Thermometer("t1", 0, 1); // inside close
+    t2 = new Thermometer("t2", 0, 7); // inside far
     list = new ArrayList<>();
     list.add(t0);
     list.add(t1);
