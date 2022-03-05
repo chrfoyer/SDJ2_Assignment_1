@@ -11,6 +11,8 @@ public interface Model extends UnnamedPropertyChangeSubject
 
   public Thermometer getThermometer(String id);
 
+  public ThermometerList getThermometerList();
+
   public void increase();
 
   public void decrease();

@@ -44,6 +44,11 @@ public class Thermometer implements Runnable
     return id;
   }
 
+  public TemperatureList getTemperatureList()
+  {
+    return temperatureList;
+  }
+
   public double getTemp(){
     return t;
   }

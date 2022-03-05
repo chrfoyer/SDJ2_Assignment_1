@@ -9,7 +9,6 @@ public class ModelManager implements Model
 {
   private PropertyChangeSupport property;
   private Heater heater;
-  // todo do we have the three thermometer objects here?
   private ThermometerList list;
 
   public ModelManager()
@@ -34,6 +33,12 @@ public class ModelManager implements Model
   @Override public Thermometer getThermometer(String id)
   {
     return list.getThermometer(id);
+  }
+
+  @Override public ThermometerList getThermometerList()
+  {
+
+    return list;
   }
 
   @Override public void increase()
