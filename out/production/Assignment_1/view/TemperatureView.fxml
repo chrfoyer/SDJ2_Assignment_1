@@ -65,11 +65,24 @@
         </HBox>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Button mnemonicParsing="false" onAction="#heaterSettings" prefHeight="66.0" prefWidth="158.0" text="Heater Settings">
-                    <font>
+            <VBox alignment="CENTER" prefHeight="81.0" prefWidth="265.0">
+               <children>
+                      <Button mnemonicParsing="false" onAction="#heaterSettings" prefHeight="81.0" prefWidth="170.0" text="Heater Settings">
+                          <font>
+                              <Font size="19.0" />
+                          </font>
+                      </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="81.0" prefWidth="272.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="81.0" prefWidth="171.0" text="Logs" onAction="#openLogs">
+                     <font>
                         <Font size="19.0" />
-                    </font>
-                </Button>
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
             </children>
         </HBox>
         <HBox alignment="CENTER" prefHeight="65.0" prefWidth="600.0">

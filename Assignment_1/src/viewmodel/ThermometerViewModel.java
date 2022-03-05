@@ -97,13 +97,15 @@ public class ThermometerViewModel implements PropertyChangeListener
                 t2Label.set(thermometer.getTemp() + " C°");
                 break;
             }
-            if (thermometer.getTemp()<Thermometer.MIN)
+            if (thermometer.getTemp() <= Thermometer.MIN)
             {
-              errorLabel.set("WARNING TEMPERATURE IS TO COLD PREPARE FOR EVACUATION");
+              errorLabel.set(
+                  "WARNING TEMPERATURE IS TO COLD PREPARE FOR EVACUATION");
             }
-            else if (thermometer.getTemp()<Thermometer.MAX)
+            else if (thermometer.getTemp() >= Thermometer.MAX)
             {
-              errorLabel.set("WARNING TEMPERATURE IS TO HOT PREPARE FOR EVACUATION");
+              errorLabel.set(
+                  "WARNING TEMPERATURE IS TO HOT PREPARE FOR EVACUATION");
             }
           }
 

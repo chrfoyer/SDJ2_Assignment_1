@@ -14,9 +14,9 @@ public class ThermometerList
   public ThermometerList(Heater heater)
   {
     this.heater = heater;
-    t0 = new Thermometer("t0", -5, 1, heater);
-    t1 = new Thermometer("t1", 29, 7, heater);
-    t2 = new Thermometer("t2", 21, 100, heater); // todo confirm distance values
+    t0 = new Thermometer("t0", 10, 1);
+    t1 = new Thermometer("t1", 25, 7);
+    t2 = new Thermometer("t2", 21, 100); // todo confirm distance values
     list = new ArrayList<>();
     list.add(t0);
     list.add(t1);

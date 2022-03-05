@@ -12,6 +12,7 @@ public class ViewHandler
   private Stage primaryStage;
   private ViewModelFactory viewModelFactory;
   private TemperatureViewController temperatureViewController;
+  private TemperatureLogsController temperatureLogsController;
   private HeaterViewController heaterViewController;
 
   public ViewHandler(ViewModelFactory viewModelFactory)
@@ -37,6 +38,9 @@ public class ViewHandler
       case "heater":
         root = loadHeaterView("HeaterView.fxml");
         break;
+      case "logs":
+        root = loadLogsView("TemperatureLogs.fxml");
+        break;
     }
     currentScene.setRoot(root);
     String title = "";
@@ -49,6 +53,30 @@ public class ViewHandler
     primaryStage.setWidth(root.getPrefWidth());
     primaryStage.setHeight(root.getPrefHeight());
     primaryStage.show();
+  }
+
+  private Region loadLogsView(String fxmlFile)
+  {
+    if (temperatureLogsController == null)
+    {
+      try
+      {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource(fxmlFile));
+        Region root = loader.load();
+        temperatureLogsController = loader.getController();
+        temperatureLogsController.init(this, viewModelFactory.gettLVM(), root);
+      }
+      catch (Exception e)
+      {
+        e.printStackTrace();
+      }
+    }
+    else
+    {
+      temperatureLogsController.reset();
+    }
+    return temperatureLogsController.getRoot();
   }
 
   private Region loadTemperatureView(String fxmlFile)

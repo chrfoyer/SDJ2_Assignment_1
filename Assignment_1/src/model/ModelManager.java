@@ -66,7 +66,7 @@ public class ModelManager implements Model
 
   public void externalTemperature()
   {
-    double t0 = 0;
+    double t0 = getThermometer("t0").getTemp();
     double left = getThermometer("t0").getTemp() - Thermometer.MIN;
     double right = Thermometer.MAX - getThermometer("t0").getTemp();
     int sign = Math.random() * (left + right) > left ? 1 : -1;

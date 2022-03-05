@@ -8,14 +8,12 @@ public class Thermometer implements Runnable
   public static final double MAX = 30;
   public static final double MIN = -1;
   private TemperatureList temperatureList;
-  private Heater heater;
 
-  public Thermometer(String id, double t, int d, Heater heater)
+  public Thermometer(String id, double t, int d)
   {
     this.id = id;
     this.t = t;
     this.d = d;
-    this.heater = heater;
     temperatureList = new TemperatureList();
   }
 

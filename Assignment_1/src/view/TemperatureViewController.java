@@ -49,4 +49,10 @@ public class TemperatureViewController
     viewHandler.openView("heater");
   }
 
+  @FXML private void openLogs()
+  {
+    viewHandler.openView("logs");
+  }
+
+
 }
