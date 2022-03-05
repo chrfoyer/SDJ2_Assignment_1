@@ -22,6 +22,7 @@ public class ModelManager implements Model
   @Override public void updateTemperature(Double temperature, String id)
   {
      list.getThermometer(id).setTemp(temperature);
+     property.firePropertyChange("setTemp", false, list);
       //how do we update temperature to the double? how do we kow which thermometer to update?
   }
 
@@ -37,12 +38,14 @@ public class ModelManager implements Model
 
   @Override public void increase()
   {
-    // heater.increase();
+    heater.increase();
+    property.firePropertyChange("heaterIncrease", false, heater.status());
   }
 
   @Override public void decrease()
   {
-    // heater.decrease();
+    heater.decrease();
+    property.firePropertyChange("heaterDecrease", false, heater.status());
   }
 
   @Override public void addListener(PropertyChangeListener listener)

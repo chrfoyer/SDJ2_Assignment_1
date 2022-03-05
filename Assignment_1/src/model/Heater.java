@@ -30,6 +30,6 @@ public class Heater {
 
   public String status()
   {
-    state.status();
+    return state.status();
   }
 }
