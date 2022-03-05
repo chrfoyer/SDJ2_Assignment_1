@@ -36,7 +36,7 @@ public class ThermometerViewModel implements PropertyChangeListener
   public void reset()
   {
     //ThermometerList thermoMeters = model;
-    for (Thermometer thermometer : thermoMeters.getList())
+    for (Thermometer thermometer : model.getList())
     {
       t1Label.set(thermometer.getId() + " " + thermometer.getTemp());
       //test
