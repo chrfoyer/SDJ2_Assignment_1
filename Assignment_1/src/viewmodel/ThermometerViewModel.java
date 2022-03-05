@@ -30,6 +30,8 @@ public class ThermometerViewModel implements PropertyChangeListener
 
     this.errorLabel = new SimpleStringProperty();
     model.addListener(this);
+
+    reset();
   }
 
   public void reset()
