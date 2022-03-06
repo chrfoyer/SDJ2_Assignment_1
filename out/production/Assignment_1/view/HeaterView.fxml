@@ -6,17 +6,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-      minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
-      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="view.HeaterViewController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.HeaterViewController">
     <children>
         <HBox alignment="CENTER" prefHeight="32.0" prefWidth="600.0">
             <children>
-                <Label text="Heater Controlls">
+                <Label text="Heater Controls">
                     <font>
-                        <Font size="36.0"/>
+                        <Font size="36.0" />
                     </font>
                 </Label>
             </children>
@@ -27,13 +23,12 @@
                     <children>
                         <Label text="Current Setting">
                             <font>
-                                <Font size="18.0"/>
+                                <Font size="18.0" />
                             </font>
                         </Label>
-                        <Label text="Setting" textFill="RED"
-                               fx:id="settingLabel">
+                        <Label fx:id="settingLabel" text="Setting" textFill="RED">
                             <font>
-                                <Font size="18.0"/>
+                                <Font size="18.0" />
                             </font>
                         </Label>
                     </children>
@@ -44,22 +39,18 @@
             <children>
                 <VBox alignment="CENTER" prefHeight="142.0" prefWidth="142.0">
                     <children>
-                        <Button mnemonicParsing="false" prefHeight="100.0"
-                                prefWidth="100.0" text="Decrease"
-                                onAction="#decreaseButton">
+                        <Button mnemonicParsing="false" onAction="#decreaseButton" prefHeight="100.0" prefWidth="116.0" text="Decrease">
                             <font>
-                                <Font size="18.0"/>
+                                <Font size="18.0" />
                             </font>
                         </Button>
                     </children>
                 </VBox>
                 <VBox alignment="CENTER" prefHeight="142.0" prefWidth="142.0">
                     <children>
-                        <Button mnemonicParsing="false" prefHeight="100.0"
-                                prefWidth="100.0" text="Increase"
-                                onAction="#increaseButton">
+                        <Button mnemonicParsing="false" onAction="#increaseButton" prefHeight="100.0" prefWidth="120.0" text="Increase">
                             <font>
-                                <Font size="20.0"/>
+                                <Font size="20.0" />
                             </font>
                         </Button>
                     </children>
@@ -68,20 +59,18 @@
         </HBox>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Button mnemonicParsing="false" prefHeight="92.0"
-                        prefWidth="121.0" text="Return"
-                        onAction="#returnButton">
+                <Button mnemonicParsing="false" onAction="#returnButton" prefHeight="65.0" prefWidth="128.0" text="Return">
                     <font>
-                        <Font size="18.0"/>
+                        <Font size="18.0" />
                     </font>
                 </Button>
             </children>
         </HBox>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Label text="Error" textFill="RED" fx:id="errorLabel">
+                <Label fx:id="errorLabel" text="Error" textFill="RED">
                     <font>
-                        <Font size="14.0"/>
+                        <Font size="14.0" />
                     </font>
                 </Label>
             </children>

@@ -7,14 +7,11 @@ public class Thermometer implements Runnable
   private int d;
   public static final double MAX = 30;
   public static final double MIN = -1;
-  private TemperatureList temperatureList;
-
   public Thermometer(String id, double t, int d)
   {
     this.id = id;
     this.t = t;
     this.d = d;
-    temperatureList = new TemperatureList();
   }
 
   /*private double temperature()
@@ -44,17 +41,11 @@ public class Thermometer implements Runnable
     val = val / 100;
 
     this.t = val;
-    temperatureList.addTemperature(t);
   }
 
   public String getId()
   {
     return id;
-  }
-
-  public TemperatureList getTemperatureList()
-  {
-    return temperatureList;
   }
 
   public double getTemp()
