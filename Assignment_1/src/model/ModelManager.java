@@ -24,7 +24,6 @@ public class ModelManager implements Model
   {
     list.getThermometer(id).setTemp(temperature);
     property.firePropertyChange("setTemp", false, list);
-    //how do we update temperature to the double? how do we kow which thermometer to update?
   }
 
   @Override public Heater getHeater()

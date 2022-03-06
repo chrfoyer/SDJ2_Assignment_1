@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class ThermometerViewModel implements PropertyChangeListener
 {
-  //todo fxml fields
+
   private StringProperty t0Label; //OUTSIDE
   private StringProperty t1Label; //INSIDE
   private StringProperty t2Label; //INSIDE

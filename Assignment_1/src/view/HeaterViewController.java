@@ -3,12 +3,7 @@ package view;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Region;
-import model.Heater;
 import viewmodel.HeaterViewModel;
-import viewmodel.ThermometerViewModel;
-
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 
 public class HeaterViewController
 {
@@ -27,7 +22,7 @@ public class HeaterViewController
     this.root = root;
 
     this.settingLabel.setText("OFF");
-    this.errorLabel.textProperty().bind(viewModel.getErrrorProprety());
+    this.errorLabel.textProperty().bind(viewModel.getErrorProperty());
     this.settingLabel.textProperty().bind(viewModel.getSettingProperty());
   }
 

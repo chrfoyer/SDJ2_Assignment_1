@@ -11,13 +11,12 @@ import java.beans.PropertyChangeListener;
 public class HeaterViewModel implements PropertyChangeListener
 {
   private Model model;
-  boolean stopItGetSomeHelp;
-  private StringProperty errrorProprety;
+  private StringProperty errorProperty;
   private StringProperty settingProperty;
 
   public HeaterViewModel(Model model)
   {
-    errrorProprety = new SimpleStringProperty();
+    errorProperty = new SimpleStringProperty();
     settingProperty = new SimpleStringProperty(
         model.getHeater().statusString());
     this.model = model;
@@ -27,7 +26,7 @@ public class HeaterViewModel implements PropertyChangeListener
 
   public void reset()
   {
-    errrorProprety.set("");
+    errorProperty.set("");
   }
 
   public void increaseHeaterState()
@@ -85,15 +84,15 @@ public class HeaterViewModel implements PropertyChangeListener
       }
       catch (Exception e)
       {
-        errrorProprety.set(e.getMessage());
+        errorProperty.set(e.getMessage());
       }
     });
 
   }
 
-  public StringProperty getErrrorProprety()
+  public StringProperty getErrorProperty()
   {
-    return errrorProprety;
+    return errorProperty;
   }
 
   public StringProperty getSettingProperty()
