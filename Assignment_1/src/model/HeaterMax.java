@@ -7,8 +7,7 @@ public class HeaterMax extends HeaterState{
   {
     timer = new Thread(() -> {
       try {
-        //todo
-        Thread.sleep(5000);
+        Thread.sleep(40000);
         timeout(heater);
       } catch (InterruptedException e) {
         System.out.println("Timer interrupted");
